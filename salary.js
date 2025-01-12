@@ -22,5 +22,7 @@ function addEmployee(event) {
     annualSalary
 };
 
+// push the new employee object into the array
+ employees.push(newEmployee);
    
 }
