@@ -26,3 +26,10 @@ function addEmployee(event) {
  employees.push(newEmployee);
    
 }
+function displayEmployees() {
+    const tableBody = document.getElementById('tBody'); 
+    tableBody.innerHTML = ''; // Clear existing table rows
+
+}
+
+ 
