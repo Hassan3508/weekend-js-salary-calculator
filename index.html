@@ -1,3 +1,4 @@
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -10,14 +11,15 @@
 <body>
     <h1>Add Employee</h1>
     <form id="employeeForm" onclick="addEmployee(event)">
-        <input type="text" id="firstName" placeholder="FirstName" required>
-        <input type="text" id="lastName" placeholder="LastName" required>
-        <input type="text" id="idNumber" placeholder="IDNumber" required>
-        <input type="text" id="jobTitle" placeholder="JobTitle" required>
-        <input type="number" id="annualSalary" placeholder="AnnualSalary" required>
-        <button>Submit</button>
-        
+        <input type="text" id="firstName" placeholder="First Name" required>
+        <input type="text" id="lastName" placeholder="Last Name" required>
+        <input type="text" id="idNumber" placeholder="ID" required>
+        <input type="text" id="jobTitle" placeholder="Title" required>
+        <input type="number" id="annualSalary" placeholder="Annual Salary" required>
+        <button type="submit">Submit</button>
+    
     </form>
+
 
     <h2>Employes</h2>
 
@@ -29,11 +31,15 @@
         <th>ID Number</th>
          <th>Job Title</th>
          <th>Annual Salary</th>
+         <th>Delete</th>
          </tr>
          </thead>
         <tbody>
-              
+        
        </tbody> 
+     </table>
+
 
 </body>
 </html>
+
