@@ -26,10 +26,21 @@ function addEmployee(event) {
  employees.push(newEmployee);
    
 }
-function displayEmployees() {
+  function displayEmployees() {
     const tableBody = document.getElementById('tBody'); 
     tableBody.innerHTML = ''; // Clear existing table rows
 
+    for(let i = 0; i < employees.length; i++) {
+        const employee = employees[i];
+       tableBody.innerHTML += `<tr>
+            <td>${employee.firstName}</td>
+            <td>${employee.lastName}</td>
+            <td>${employee.idNumber}</td>
+            <td>${employee.jobTitle}</td>
+            <td>${employee.annualSalary}</td>
+        
+           </tr>`;      
+    }
 }
 
  
