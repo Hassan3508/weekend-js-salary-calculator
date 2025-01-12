@@ -1,8 +1,10 @@
+
 // array to store employee data
 const employees = [];
 
 
 function addEmployee(event) {
+     // stops the form from reloading
     event.preventDefault(); 
 
     // Get the values from the input fields
@@ -12,35 +14,47 @@ function addEmployee(event) {
     const jobTitle = document.getElementById('jobTitle').value;
     const annualSalary = Number(document.getElementById('annualSalary').value); // converted to number
 
+   
+ // employee object
+    const newEmployee = {
+        firstName,
+        lastName,
+        idNumber,
+        jobTitle,
+        annualSalary
+    };
 
-   // create a new employee object using shorthand method
-   const newEmployee = {
-    firstName,
-    lastName,
-    idNumber,
-    jobTitle,
-    annualSalary
-};
-
-// push the new employee object into the array
- employees.push(newEmployee);
+    employees.push(newEmployee);
+    displayEmployees();  
+    removeEmployee();
    
 }
-  function displayEmployees() {
-    const tableBody = document.getElementById('tBody'); 
-    tableBody.innerHTML = ''; // Clear existing table rows
 
-    for(let i = 0; i < employees.length; i++) {
+function displayEmployees() {
+    const tableBody = document.getElementById('tBody');
+    tableBody.innerHTML = '';
+
+    for (let i = 0; i < employees.length; i++) {
         const employee = employees[i];
-       tableBody.innerHTML += `<tr>
+
+        const row = document.createElement('tr');
+        row.innerHTML = `
             <td>${employee.firstName}</td>
             <td>${employee.lastName}</td>
             <td>${employee.idNumber}</td>
             <td>${employee.jobTitle}</td>
             <td>${employee.annualSalary}</td>
-        
-           </tr>`;      
+            <td><button>Delete</button></td>
+        `;
+
+
+             
     }
 }
 
- 
+function removeEmployee(event){
+  console.log("row removed");
+  event.target.closest("tr").remove();
+
+}
+
