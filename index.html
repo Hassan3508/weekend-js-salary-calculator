@@ -9,7 +9,9 @@
     <title>Salary Calculator</title>
 </head>
 <body>
-    <h1>Add Employee</h1>
+    <header>
+        <h1>Add Employee</h1>
+    </header>
     <form id="employeeForm" onclick="addEmployee(event)">
         <input type="text" id="firstName" placeholder="First Name" required>
         <input type="text" id="lastName" placeholder="Last Name" required>
@@ -35,10 +37,17 @@
          </tr>
          </thead>
          <tbody id="tBody">
-       </tbody> 
-        
+        <tr>
+            <td>ismail</td>
+            <td>hassan</td>
+            <td>8900</td>
+            <td>supervisor</td>
+            <td>80000</td>
+            <td><button onclick="removeEmployee(event)">Delete</button></td>
+            <tr>
        </tbody> 
      </table>
+     <h3 id="totalMontlyCost">Total Montly:</h3>
 
 
 </body>
